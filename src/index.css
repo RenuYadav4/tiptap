@@ -1,0 +1,279 @@
+/* Body and general layout */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.top-navbar {
+  background-color: #485173; /* New unique color */
+  color: white;
+  padding: 6px 20px; /* Reduced height further */
+  text-align: center;
+  font-size: 18px;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.bottom-navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 2px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Beautiful shadow */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+button {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #d3d3d3;
+  border-color: #9b59b6;
+}
+
+button:active {
+  background-color: #b0b0b0;
+}
+
+button.is-active {
+  background-color: #59b661;
+  color: white;
+  border-color: #03481c;
+}
+
+button i {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+/* Color Picker Styles */
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.color-palette-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #394761;
+}
+
+.color-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.color-palette {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.color-palette button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.color-palette button.is-active {
+  border: 2px solid #59b6a0;
+}
+
+input[type="color"] {
+  width: 50px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Text Size Button Styles */
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+select:hover {
+  background-color: #e8e8e8;
+}
+
+select:focus {
+  border-color: #34203c;
+  outline: none;
+}
+
+/* Editor Field */
+.EditorContent {
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+}
+
+.save-button {
+  width: 15%;
+  background-color: #0cb149;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.save-button:hover {
+  background-color: #03481c;
+}
+
+.save-button:active {
+  background-color: #03481c;
+}
+
+.save-button:focus {
+  outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .top-navbar {
+    height: 50px;
+    font-size: 12px;
+    padding: 8px 15px; /* Adjust navbar padding */
+  }
+
+  .button-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .button-group button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .color-picker-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .color-palette button {
+    width: 25px;
+    height: 25px;
+  }
+
+  .EditorContent {
+    height: 250px;
+    font-size: 14px;
+  }
+
+  .save-button {
+    width: 20%;
+    padding: 12px 0;
+    font-size: 18px;
+  }
+}
+/* Overall container for the application */
+.app-container {
+  max-width: 1200px;  /* Limiting the width */
+  margin: 20px auto;  /* Centering the content */
+  padding: 20px;  /* Padding for spacing inside */
+  background-color: #ffffff;  /* Background color for the entire app */
+  border-radius: 10px;  /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow around the app */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    margin: 10px;  /* Less margin on smaller screens */
+    padding: 15px;  /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    margin: 5px;  /* Less margin for phones */
+    padding: 10px;  /* Adjust padding for phones */
+  }
+}
+
+
+@media (max-width: 480px) {
+  .top-navbar {
+    height: 50px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .button-group button {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .color-palette button {
+    width: 20px;
+    height: 20px;
+  }
+
+  .EditorContent {
+    height: 220px;
+    font-size: 12px;
+  }
+
+  .save-button {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
