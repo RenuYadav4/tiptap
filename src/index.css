@@ -277,3 +277,21 @@ select:focus {
     padding: 10px 0;
   }
 }
+
+
+.highlight-button {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.highlight-button:hover {
+  background-color: #f0f0f0;
+}
+
+.is-active.highlight-button {
+  border-color: #000;
+}

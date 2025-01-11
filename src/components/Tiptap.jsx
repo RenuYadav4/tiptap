@@ -6,6 +6,8 @@ import { TextStyle } from '@tiptap/extension-text-style';
 import { Color } from '@tiptap/extension-color';
 import { TextAlign } from '@tiptap/extension-text-align';
 import { Underline } from '@tiptap/extension-underline';
+import { Highlight } from '@tiptap/extension-highlight';
+
 import '../index.css';
 
 const extensions = [
@@ -14,6 +16,7 @@ const extensions = [
     Color,
     TextAlign.configure({ types: ['paragraph'] }),
     Underline,
+    Highlight.configure({ multicolor: true }),
 ];
 
 const content = ``;
@@ -104,6 +107,18 @@ const Tiptap = () => {
                         className={activeButtons.highlight ? 'is-active' : ''}
                     >
                         <FaPaintBrush />
+                    </button>
+                    <button onClick={() => handleHighlight('yellow')} className="highlight-button">
+                        Highlight Yellow
+                    </button>
+                    <button onClick={() => handleHighlight('pink')} className="highlight-button">
+                        Highlight Pink
+                    </button>
+                    <button onClick={() => handleHighlight('lightblue')} className="highlight-button">
+                        Highlight Blue
+                    </button>
+                    <button onClick={() => handleHighlight(null)} className="highlight-button">
+                        Remove Highlight
                     </button>
                 </div>
 
