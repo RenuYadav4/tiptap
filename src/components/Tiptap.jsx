@@ -9,6 +9,7 @@ import { Underline } from '@tiptap/extension-underline';
 import { Highlight } from '@tiptap/extension-highlight';
 
 import '../index.css'
+import { FontSize } from './FontSize';
 const extensions = [
   StarterKit,
   TextStyle,
@@ -16,6 +17,7 @@ const extensions = [
   TextAlign.configure({ types: ['paragraph'] }),
   Underline,
   Highlight.configure({ multicolor: true }),
+  FontSize,
 ];
 
 const content = ``;
@@ -155,8 +157,8 @@ const Tiptap = () => {
         {/* Font Size Button */}
         <div className="button-group">
           <select
-            onChange={(e) => editor.chain().focus().setTextStyle({ fontSize: e.target.value }).run()}
-            value={editor.getAttributes('textStyle').fontSize || '16px'}
+            onChange={(e) => editor.chain().focus().setFontSize(e.target.value).run()}
+            // value={editor.getAttributes('textStyle').fontSize || '16px'}
           >
             <option value="16px">16px</option>
             <option value="18px">18px</option>
