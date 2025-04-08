@@ -101,12 +101,17 @@ const Tiptap = () => {
           >
             <FaUnderline />
           </button>
+
           <button
-            onClick={handleHighlight}
+            onClick={() => {
+              handleHighlight();   //no color is passed default is yellow
+              handleToggleButton('highlight');
+            }}
             className={activeButtons.highlight ? 'is-active' : ''}
           >
             <FaPaintBrush />
           </button>
+
 
 
           <button onClick={() => handleHighlight('yellow')} className="highlight-button">

@@ -232,7 +232,7 @@ select:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow around the app */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 @media (max-width: 768px) {
